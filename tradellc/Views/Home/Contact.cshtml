@@ -1,17 +1,83 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="jumbotron text-center header_main row">
+    <div class="col-md-12">
+        <h8>Contact</h8>
+    </div>
+</div>
+
+<!-- these two divs look out of place, but they are necessary to make the header full screen -->
+</div>
+<div class="container body-content">
+    <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
+    PO Box #4<br />
+    Springville, UT 84663<br />
     <abbr title="Phone">P:</abbr>
-    425.555.0100
+    209.480.4644
 </address>
 
 <address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    <a href="mailto:documents@trade-llc.com">Send us an email!</a>
 </address>
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    //This is the form for the contact page - maxLength's are included
+    <div class="row">
+        <div class="col-md-4">
+            <label class="control-label" for="inputFirst">First Name</label>
+            <input type="text" class="form-control" id="inputFirst" placeholder="First Name" maxlength="50">
+        </div>
+        <div class="col-md-4">
+            <label class="control-label" for="inputLast">Last Name</label>
+            <input type="text" class="form-control" id="inputLast" placeholder="Last Name" maxlength="50">
+        </div>
+        <div class="col-md-4">
+            <label class="control-label" for="inputPhone">Phone Number</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number" maxlength="10">
+        </div>
+    </div>
+    
+    <br />
+    <br />
+    
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <label class="control-label" for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" maxlength="100">
+        </div>
+        @*this is the dropdown subject list*@
+        <div class="col-md-4">
+            <label class="control-label" for="inputSubject">Subject</label>
+            <select class="form-control" id="inputSubject" name="Subject">
+                <option value="">Subject</option>
+                <option value="bidDried">Dried Fruit Bid</option>
+                <option value="bidNut">Nuts Bid</option>
+                <option value="bidMisc">Miscellaneous Bid</option>
+                <option value="offerDried">Dried Fruit Offer</option>
+                <option value="offerNut">Nuts Offer</option>
+                <option value="offerMisc">Miscellaneous Offer</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </div>
+    
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            @*This is calling the function to keep track of character count for the Message Text box*@
+            <label class="control-label" for="inputMessage">Message</label>
+            <textarea style="max-width: 90% !important" type="text" class="form-control" id="inputMessage" placeholder="Message" maxlength="1000" rows="10" width="100%"></textarea>
+            <p id="characterCount"></p>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    
+    <br />
+    <button type="submit" class="btn btn-default" onclick="clearContact()">Submit</button>
+}
