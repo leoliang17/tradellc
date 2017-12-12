@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace tradellc.Controllers
+namespace trade_llc_login.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -15,7 +16,7 @@ namespace tradellc.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "";
 
             return View();
         }
@@ -23,6 +24,13 @@ namespace tradellc.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Products()
+        {
+            ViewBag.Message = "Your products page.";
 
             return View();
         }
