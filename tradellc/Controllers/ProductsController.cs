@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using trade_llc_login.DAL;
-using trade_llc_login.Models;
+using tradellc.DAL;
+using tradellc.Models;
 
-namespace trade_llc_login.Controllers
+namespace tradellc.Controllers
 {
     public class ProductsController : Controller
     {

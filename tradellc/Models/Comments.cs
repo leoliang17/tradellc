@@ -6,12 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace trade_llc_login.Models
+namespace tradellc.Models
 {
-    [Table("Comments")]
+    //[Table("Comments")]
     public class Comments
     {
-        [Key]
+       /* [Key]
         public int CommentID { get; set; }
 
         [Required]
@@ -25,6 +25,6 @@ namespace trade_llc_login.Models
 
         //[ForeignKey("AspNetUsers")]
         public int UserID { get; set; }
-        //public virtual AspNetUsers ApsNetUsers  { get; set; }
+        //public virtual AspNetUsers ApsNetUsers  { get; set; }*/
     }
 }

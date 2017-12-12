@@ -6,12 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace trade_llc_login.Models
+namespace tradellc.Models
 {
-    [Table("CommentReplies")]
+    //[Table("CommentReplies")]
     public class CommentReplies
     {
-        [Key]
+       /* [Key]
         public int ReplyID { get; set; }
 
         [Required]
@@ -21,6 +21,6 @@ namespace trade_llc_login.Models
 
         [ForeignKey("Comments")]
         public int CommentID { get; set; }
-        public virtual Comments Comments { get; set; }
+        public virtual Comments Comments { get; set; }*/
     }
 }

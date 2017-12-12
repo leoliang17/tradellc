@@ -6,12 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace trade_llc_login.Models
+namespace tradellc.Models
 {
-    [Table("Products")]
+    //[Table("Products")]
     public class Products
     {
-        [Key]
+        /*[Key]
         public int ProductID { get; set; }
 
         [Required(ErrorMessage = "Please provide a name for the product")]
@@ -53,6 +53,6 @@ namespace trade_llc_login.Models
 
         //[ForeignKey("AspNetUsers")]
         public int? BuyerID { get; set; }
-        //public virtual AspNetUsers AspNetUsers { get; set; }
+        //public virtual AspNetUsers AspNetUsers { get; set; }*/
     }
 }

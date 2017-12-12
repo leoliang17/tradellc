@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace trade_llc_login.Models
+namespace tradellc.Models
 {
     //[Table("Types_Users")]
     public class Types_Users

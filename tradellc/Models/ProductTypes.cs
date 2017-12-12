@@ -6,17 +6,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace trade_llc_login.Models
+namespace tradellc.Models
 {
-    [Table("ProductTypes")]
+    //[Table("ProductTypes")]
     public class ProductTypes
     {
-        [Key]
+       /* [Key]
         public int ProductTypeID { get; set; }
 
         [Required]
         [DisplayName("Product Type")]
         [StringLength(255)]
-        public string ProductType { get; set; }
+        public string ProductType { get; set; }*/
     }
 }

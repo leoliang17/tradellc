@@ -6,17 +6,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace trade_llc_login.Models
+namespace tradellc.Models
 {
-    [Table("Types")]
+    //[Table("Types")]
     public class Types
     {
-        [Key]
-        public int TypeID { get; set; }
+        /*[key]
+        public int typeid { get; set; }
 
-        [Required]
-        [DisplayName("User Type")]
-        [StringLength(255)]
-        public string Type { get; set; }
+        [required]
+        [displayname("user type")]
+        [stringlength(255)]
+        public string type { get; set; }*/
     }
 }
